@@ -1,0 +1,50 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Calorie Tracker{% endblock %}
+
+{% block content %}
+<main>
+    <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
+                <defs>
+                    <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                        <path d="M100 200V.5M.5 .5H200" fill="none" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+            </svg>
+        </div>
+        <div class="mx-auto max-w-2xl">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ project.name }}</h1>
+            <p class="mt-4 text-xl text-gray-700">{{ project.description }}</p>
+
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold">Details</h2>
+                <ul class="mt-4 space-y-2">
+                    <li><strong>Tier:</strong> {{ project.get_tier_display }}</li>
+                    <li><strong>Difficulty Level:</strong> {{ project.get_difficulty_level_display }}</li>
+                    <li><strong>Requirements:</strong> {{ project.requirements|default:"N/A" }}</li>
+                    <li><strong>Resources:</strong> {{ project.resources|linebreaks|default:"N/A" }}</li>
+                    <li><strong>Estimated Time:</strong> {{ project.estimated_time|default:"N/A" }} Hours</li>
+                </ul>
+            </div>
+        </div> <!-- Closing div for mx-auto max-w-2xl -->
+    </div> <!-- Closing div for relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0 -->
+</main>
+{% endblock %}
+
+<style>
+    .code-container {
+        white-space: pre; /* Preserve whitespace formatting */
+    }
+    .comment {
+        color: red;
+    }
+    .indent-1 {
+        margin-left: 20px;
+    }
+    .indent-2 {
+        margin-left: 40px;
+    }
+</style> <!-- Ensure style block is closed -->

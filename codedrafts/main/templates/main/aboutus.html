@@ -1,0 +1,59 @@
+{% extends 'main/base.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<main>
+    <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
+                <defs>
+                    <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                        <path d="M100 200V.5M.5 .5H200" fill="none" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+            </svg>
+        </div>
+        <div class="mx-auto max-w-2xl">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">About Us</h1>
+            <p class="mt-4 text-xl text-gray-700">
+                At CodeDrafts, we are dedicated to creating innovative solutions and driving progress in the tech world. Our mission is to build impactful projects that solve real-world problems and deliver exceptional value to our clients and community.
+            </p>
+
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold">Our Mission</h2>
+                <p class="mt-4 text-lg text-gray-700">
+                    Our mission is to empower individuals and businesses through cutting-edge technology and creative problem-solving. We strive to be at the forefront of technological advancements, providing top-notch solutions and fostering a culture of continuous improvement and collaboration.
+                </p>
+            </div>
+
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold">Meet the Team</h2>
+                <ul class="mt-4 space-y-2">
+                    <li><strong>Abdul</strong></li>
+                    <li><strong>Md</strong></li>
+                    <li><strong>Spacetimebends</strong></li>
+                    <li><strong>Nischint</strong></li>
+                    <li><strong>Aldino - Building Inspector</strong></li>
+                </ul>
+            </div>
+        </div> <!-- Closing div for mx-auto max-w-2xl -->
+    </div> <!-- Closing div for relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0 -->
+</main>
+{% endblock %}
+
+<style>
+    .code-container {
+        white-space: pre; /* Preserve whitespace formatting */
+    }
+    .comment {
+        color: red;
+    }
+    .indent-1 {
+        margin-left: 20px;
+    }
+    .indent-2 {
+        margin-left: 40px;
+    }
+</style> <!-- Ensure style block is closed -->

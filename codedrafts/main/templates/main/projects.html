@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<main>
+    <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+        <div class="mx-auto max-w-2xl">
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Projects</h1>
+            
+            <!-- Beginner Projects -->
+            <div class="mt-8">
+                <h2 class="text-xl font-semibold">Beginner Projects</h2>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a href="/bank-management/" class="text-lg font-semibold text-blue-600">C++ Bank Management System</a>
+                        <p class="text-gray-700">A simple project to manage bank accounts.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Intermediate Projects -->
+            <div class="mt-12">
+                <h2 class="text-xl font-semibold">Intermediate Projects</h2>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a href="/cv/" class="text-lg font-semibold text-blue-600">Website CV Generator</a>
+                        <p class="text-gray-700">A project to generate resumes and CVs.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Advanced Projects -->
+            <div class="mt-12">
+                <h2 class="text-xl font-semibold">Advanced Projects</h2>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <a href="/tracker/" class="text-lg font-semibold text-blue-600">Advanced Macro Tracker</a>
+                        <p class="text-gray-700">A project for tracking macronutrients.</p>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- Closing div for mx-auto max-w-2xl -->
+    </div> <!-- Closing div for relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0 -->
+</main>
+{% endblock %}
