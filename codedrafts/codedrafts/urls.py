@@ -25,4 +25,7 @@ urlpatterns = [
     path('tracker/', views.macro_tracker, name='macro'),
     path('aboutus/', views.about,name='about'),
     path('projects/', views.projects_view, name='projects'),
+    path('register/', views.register_view, name="register"),
+    path('login/', views.login_view, name="login"),
+    
 ]

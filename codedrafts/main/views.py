@@ -1,5 +1,7 @@
-from django.shortcuts import render,  get_object_or_404
+from django.shortcuts import render,  get_object_or_404, redirect
 from .models import Projects
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm 
+from django.contrib.auth import login
 
 def home(request):
     return render(request, 'main/home.html')
@@ -41,3 +43,26 @@ def projects_view(request):
     }
     
     return render(request, 'main/projects.html', context)
+
+#Login Stuff 
+
+
+def register_view(request):
+    if request.method == "POST": 
+        form = UserCreationForm(request.POST) 
+        if form.is_valid(): 
+            login(request, form.save())
+            return redirect("/login") #update to accomoade posts:list, use /login for now
+    else:
+        form = UserCreationForm()
+    return render(request, "main/register.html", { "form": form })
+
+def login_view(request): 
+    if request.method == "POST": 
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid(): 
+            login(request, form.get_user())
+            return redirect("/aboutus")  #update to accomoade posts:list, use /aboutus for now
+    else: 
+        form = AuthenticationForm()
+    return render(request, "main/login.html", { "form": form })
